@@ -56,6 +56,17 @@ el.onwheel = zoom;
 
 //resize
 
+//blur
+const blurHeading = document.querySelector("text-content")
+blurHeading.addEventListener('focus', (event) => {
+    event.target.style.background = "yellow";
+});
+blurHeading.addEventListener('blur', (event) => {
+    event.target.style.background = " ";
+});
+
+
+
 
 
 
