@@ -5,11 +5,11 @@ console.log("Project is up, sanity test")
 // 	* [x] `keydown`
 // 	* [x] `wheel`
 // 	* [x] `drag / drop`
-// 	* [ ] `load`
+// 	* [x] `load`
 // 	* [x] `focus`
 // 	* [ ] `resize`
 // 	* [ ] `scroll`
-// 	* [ ] `select`
+// 	* [x] `select`
 // 	* [x] `dblclick`
 
 //mouseover
@@ -63,31 +63,34 @@ input.addEventListener('focus', event =>{
     event.target.placeholder = "HELLO";
 });
 
+//select
+function logSelection(event){
+    const log = document.getElementById('log');
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    log.textContent = `You selected: ${selection}`;
+}
+const input2 = document.querySelector(".input2")
+input2.addEventListener('select', logSelection);
+console.log(logSelection);
 
 
-
-// function zoom(event){
-//     event.preventDefault();
-
-//     scale += event.deltaY * -0.01;
-
-//     scale = Math.min(Math.max(.125, scale), 4);
-
-//     el.style.transform = `scale(${scale})`;
-// }
-// let scale = 1;
-// const el = document.querySelector("intro");
-// el.onwheel = zoom;
-
+//scroll
 
 
 
 //load
+const buttonSuccess = document.querySelector(".btnSuccess")
 
-//focus
+buttonSuccess.addEventListener('click', (event) => {
+    console.log(`You successfully clicked the button!`)
+    event.target.style.color = "red";
+});
+
+
 
 //resize
-
+let resize = window.addEventListener('resize', reportWindowSize);
+console.log(resize);
 
 
 
