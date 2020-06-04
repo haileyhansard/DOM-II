@@ -20,6 +20,11 @@ mousePink.addEventListener("mouseover", function(event){
     event.target.style.backgroundColor = "red";
 })
 
+let mousePurple = document.querySelector(".destination p");
+mousePurple.addEventListener("mouseover", function(event){
+    event.target.style.color = "purple";
+})
+
 //keydown
 
 let offWeGo = document.querySelector(".intro h2");
@@ -89,8 +94,8 @@ buttonSuccess.addEventListener('click', (event) => {
 
 
 //resize
-let resize = window.addEventListener('resize', reportWindowSize);
-console.log(resize);
+//let resize = window.addEventListener('resize', reportWindowSize);
+//console.log(resize);
 
 
 
